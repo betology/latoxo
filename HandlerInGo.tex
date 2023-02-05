@@ -47,9 +47,9 @@ Un manejador de rutas en HTTP es una función encargada de responder a una solic
 Por ejemplo, considere el siguiente código:
 
 \begin{lstlisting}[language=Go]
-	http.HandleFunc("/hola", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/hola", func(w http.ResponseWriter, r *http.Request)) {
 		fmt.Fprintf(w, "Hola, mundo!")
-	})
+	}
 \end{lstlisting}
 
 En este código, la función anónima (es decir, \texttt{func(w http.ResponseWriter, r *http.Request) { fmt.Fprintf(w, "¡Hola, mundo!") }}) es un manejador que responde a las solicitudes hechas a la ruta \texttt{/hola} escribiendo la cadena \quotes{\texttt{¡Hola, mundo!}} en la respuesta.

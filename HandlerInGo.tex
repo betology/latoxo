@@ -3,6 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[a4paper, total={6.5in, 8in}]{geometry}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -52,7 +53,7 @@ Por ejemplo, considere el siguiente código:
 	}
 \end{lstlisting}
 
-En este código, la función anónima (es decir, \texttt{func(w http.ResponseWriter, r *http.Request) { fmt.Fprintf(w, "¡Hola, mundo!") }}) es un manejador que responde a las solicitudes hechas a la ruta \texttt{/hola} escribiendo la cadena \quotes{\texttt{¡Hola, mundo!}} en la respuesta.
+En este código, la función anónima (es decir, \texttt{func(w http.ResponseWriter, r *http.Request) \{ fmt.Fprintf(w, "¡Hola, mundo!") \} }) es un manejador que responde a las solicitudes hechas a la ruta \texttt{/hola} escribiendo la cadena \quotes{\texttt{¡Hola, mundo!}} en la respuesta.
 \\\\
 Los manejadores también pueden ser implementados como métodos de tipos que cumplan con la interfaz \texttt{http.Handler}. Por ejemplo:
 

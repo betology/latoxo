@@ -14,55 +14,11 @@
 
 \usepackage[spanish]{babel}
 
-\usepackage{graphicx}
-
-% Paquetes necesarios
-\usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath}
-\usepackage{listings}
-\usepackage{color}
-
-
-% Configuración de listings para código fuente
-\lstdefinelanguage{JavaScript}
-{
-  keywords = {typeof, new, true, false, function, return, null, switch, var, if, in, while, do, else, case, break, class, export, boolean, throw, implements, import, this, constructor, string, number, public, private, static, const, var, let, void},
-  morekeywords = [2]{class, export, boolean, throw, implements, import, this, interface},
-  morekeywords = [3]{Promise, Observable},
-  morekeywords = [4]{log},
-  otherkeywords = {;},
-  comment = [l]{//},
-  morecomment = [s]{/*}{*/},
-  morestring = [b]',
-  morestring = [b]",
-}
-
-\lstset
-{
-  language= JavaScript,
-  commentstyle = {\color{OliveGreen}},
-  stringstyle = {\color{green}},
-  keywordstyle = {\color{orange}\bfseries},
-  keywordstyle = [2]{\color{orange}},
-  keywordstyle = [3]{\color{purple}},
-  keywordstyle = [4]{\color{lime}},
-  keywordstyle = [5]{\color{orange}},
-  basicstyle = {\ttfamily \color{main-color}},
-  backgroundcolor = {\color{back-color}},    
-  sensitive = false,
-  breaklines = true,
-  showstringspaces= false,
-  showspaces= false,
-  extendedchars= true
-}
-
-
 \title{React}
 \subtitle{Una biblioteca en Javascript para crear interfaces}
 \date{\today}
 \author{Betology}
 \institute{Amor, comprensión y ternura}
-% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \begin{document}
 
@@ -106,6 +62,64 @@
     \item No tienen estado propio (antes de los Hooks).
   \end{itemize}
     \includegraphics[width=75mm,scale=0.25]{myComponentFunction.png}
+\end{frame}
+
+% Sección 3: Props y Estado
+\section{Props y Estado}
+
+% Diapositiva 1: Props
+\begin{frame}[fragile]
+  \frametitle{Props}
+  \begin{itemize}
+    \item Los `props` son entradas que los componentes reciben de sus padres.
+    \item Permiten pasar datos a los componentes hijos.
+  \end{itemize}
+    \includegraphics[width=100mm,scale=0.25]{03-props.png}
+
+\end{frame}
+
+% Diapositiva 2: Estado
+\begin{frame}[fragile]
+  \frametitle{Estado}
+  \begin{itemize}
+    \item El estado es un objeto privado del componente.
+    \item Permite a los componentes gestionar y responder a cambios de datos.
+  \end{itemize}
+    \includegraphics[width=110mm,scale=0.25]{04-estado.png}
+\end{frame}
+
+% Sección 4: Ciclo de Vida de los Componentes
+\section{Ciclo de Vida de los Componentes}
+
+% Diapositiva 1: Métodos del Ciclo de Vida
+\begin{frame}
+  \frametitle{Métodos del Ciclo de Vida}
+  \begin{itemize}
+    \item `componentDidMount`
+    \item `componentDidUpdate`
+    \item `componentWillUnmount`
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item Permiten ejecutar código en diferentes etapas del ciclo de vida del componente.
+  \end{itemize}
+\end{frame}
+
+% Diapositiva 2: Ejemplo de Método del Ciclo de Vida
+\begin{frame}[fragile]
+  \frametitle{Ejemplo de Método del Ciclo de Vida}
+    \includegraphics[width=90mm,scale=0.25]{05-cicloDeVida.png}
+\end{frame}
+
+% Diapositiva de resumen
+\begin{frame}
+  \frametitle{Resumen}
+  \begin{itemize}
+    \item React utiliza componentes para construir interfaces modulares.
+    \item Los componentes pueden ser definidos como clases o funciones.
+    \item Props y estado son fundamentales para la gestión de datos en React.
+    \item Los métodos del ciclo de vida permiten manejar eventos en las diferentes etapas del componente.
+  \end{itemize}
 \end{frame}
 
 
